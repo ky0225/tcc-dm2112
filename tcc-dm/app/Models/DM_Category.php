@@ -7,5 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class DM_Category extends Model
 {
-    use HasFactory;
+	use HasFactory;
+
+	protected $fillable = [
+		'name',
+		'name_kana',
+	];
+
+	public function card()
+	{
+		return $this->hasMany(DM_Card::class);
+	}
 }

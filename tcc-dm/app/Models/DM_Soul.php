@@ -7,5 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class DM_Soul extends Model
 {
-    use HasFactory;
+	use HasFactory;
+
+	protected $fillable = [
+		'name',
+	];
+
+	public function card()
+	{
+		return $this->hasMany(DM_Card::class);
+	}
 }

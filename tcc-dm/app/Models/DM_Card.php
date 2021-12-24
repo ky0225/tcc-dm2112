@@ -41,7 +41,7 @@ class DM_Card extends Model
 
 	public function rarity()
 	{
-		return $this->belongsTo(DM_Rariry::class);
+		return $this->belongsTo(DM_Rarity::class);
 	}
 
 	public function soul()

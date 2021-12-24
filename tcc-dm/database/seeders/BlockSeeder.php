@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class CategorySeeder extends Seeder
+class BlockSeeder extends Seeder
 {
 	/**
 	 * Run the database seeds.
@@ -14,14 +14,12 @@ class CategorySeeder extends Seeder
 	 */
 	public function run()
 	{
-		DB::table('dm_categories')->insert([
+		DB::table('dm_blocks')->insert([
 			[
-				'name' => 'クリーチャー',
-				'name_kana' => 'くりーちゃー',
+				'name' => 'オリジナル',
 			],
 			[
-				'name' => '呪文',
-				'name_kana' => 'じゅもん',
+				'name' => 'DM',
 			],
 		]);
 	}

@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class CategorySeeder extends Seeder
+class CardTribeSeeder extends Seeder
 {
 	/**
 	 * Run the database seeds.
@@ -14,14 +14,14 @@ class CategorySeeder extends Seeder
 	 */
 	public function run()
 	{
-		DB::table('dm_categories')->insert([
+		DB::table('dm_card_tribes')->insert([
 			[
-				'name' => 'クリーチャー',
-				'name_kana' => 'くりーちゃー',
+				'card_id' => 'dmrp17-083',
+				'tribe_id' => 1,
 			],
 			[
-				'name' => '呪文',
-				'name_kana' => 'じゅもん',
+				'card_id' => 'test999-999',
+				'tribe_id' => 2,
 			],
 		]);
 	}

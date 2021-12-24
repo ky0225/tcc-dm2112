@@ -15,7 +15,8 @@ class CreateDmCardTribesTable extends Migration
 	{
 		Schema::create('dm_card_tribes', function (Blueprint $table) {
 			$table->id()->unsigned();
-			$table->foreignId('card_id')->constrained('dm_cards');
+			$table->string('dm_card_id');
+			$table->foreign('dm_card_id')->references('id')->on('dm_cards');
 			$table->foreignId('tribe_id')->constrained('dm_tribes');
 			$table->timestamps();
 		});

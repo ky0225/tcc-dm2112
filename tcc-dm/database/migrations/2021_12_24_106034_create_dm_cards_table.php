@@ -32,6 +32,8 @@ class CreateDmCardsTable extends Migration
 			$table->boolean('direction');
 			$table->integer('market_price');
 			$table->timestamps();
+
+			$table->primary('id');
 		});
 	}
 

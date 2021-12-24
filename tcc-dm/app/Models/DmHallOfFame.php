@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class DM_Civilization extends Model
+class DmHallOfFame extends Model
 {
 	use HasFactory;
 
@@ -15,6 +15,6 @@ class DM_Civilization extends Model
 
 	public function card()
 	{
-		return $this->hasMany(DM_Card::class);
+		return $this->hasMany(DmCard::class);
 	}
 }

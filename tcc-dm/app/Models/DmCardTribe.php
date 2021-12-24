@@ -5,17 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class DM_Card_tribe extends Model
+class DmCardTribe extends Model
 {
 	use HasFactory;
 
 	public function card()
 	{
-		return $this->belongsTo(DM_Card::class);
+		return $this->belongsTo(DmCard::class);
 	}
 
 	public function tribe()
 	{
-		return $this->belongsTo(DM_Tribe::class);
+		return $this->belongsTo(DmTribe::class);
 	}
 }

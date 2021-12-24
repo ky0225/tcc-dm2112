@@ -5,16 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class DM_Hall_of_fame extends Model
+class DmCategory extends Model
 {
 	use HasFactory;
 
 	protected $fillable = [
 		'name',
+		'name_kana',
 	];
 
 	public function card()
 	{
-		return $this->hasMany(DM_Card::class);
+		return $this->hasMany(DmCard::class);
 	}
 }

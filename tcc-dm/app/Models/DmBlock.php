@@ -5,17 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class DM_Tribe extends Model
+class DmBlock extends Model
 {
 	use HasFactory;
 
 	protected $fillable = [
 		'name',
-		'name_kana',
 	];
 
-	public function cardTribe()
+	public function card()
 	{
-		return $this->hasMany(DM_Card_tribe::class);
+		return $this->hasMany(DmCard::class);
 	}
 }

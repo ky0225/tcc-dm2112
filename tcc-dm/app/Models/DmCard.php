@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class DM_Card extends Model
+class DmCard extends Model
 {
 	use HasFactory;
 
@@ -31,36 +31,36 @@ class DM_Card extends Model
 
 	public function category()
 	{
-		return $this->belongsTo(DM_Category::class);
+		return $this->belongsTo(DmCategory::class);
 	}
 
 	public function civilization()
 	{
-		return $this->belongsTo(DM_Civilization::class);
+		return $this->belongsTo(DmCivilization::class);
 	}
 
 	public function rarity()
 	{
-		return $this->belongsTo(DM_Rarity::class);
+		return $this->belongsTo(DmRarity::class);
 	}
 
 	public function soul()
 	{
-		return $this->belongsTo(DM_Soul::class);
+		return $this->belongsTo(DmSoul::class);
 	}
 
 	public function block()
 	{
-		return $this->belongsTo(DM_Block::class);
+		return $this->belongsTo(DmBlock::class);
 	}
 
 	public function hallOfFame()
 	{
-		return $this->belongsTo(DM_Hall_of_fame::class);
+		return $this->belongsTo(DmHallOfFame::class);
 	}
 
 	public function cardTribe()
 	{
-		return $this->hasMany(DM_Card_tribe::class);
+		return $this->hasMany(DmCardTribe::class);
 	}
 }

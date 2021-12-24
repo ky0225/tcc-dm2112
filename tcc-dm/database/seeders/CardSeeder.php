@@ -30,9 +30,11 @@ class CardSeeder extends Seeder
 				'soul_id' => 1,
 				'block_id' => 1,
 				'hall_of_fame_id' => 1,
-				'release_date' => 20210417,
+				'release_date' => '2021/04/17',
 				'direction' => 0,
 				'market_price' => 200,
+				'created_at' => '2021/12/24 11:11:11',
+				'updated_at' => '2021/12/24 12:22:22',
 			],
 			[
 				'id' => 'test999-999',
@@ -49,9 +51,11 @@ class CardSeeder extends Seeder
 				'soul_id' => 2,
 				'block_id' => 2,
 				'hall_of_fame_id' => 2,
-				'release_date' => 20211224,
+				'release_date' => '2021/12/24',
 				'direction' => 1,
 				'market_price' => 9999,
+				'created_at' => '2021/12/24 11:11:11',
+				'updated_at' => '2021/12/24 12:22:22',
 			],
 		]);
 	}

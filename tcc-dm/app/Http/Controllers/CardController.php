@@ -7,9 +7,21 @@ use App\Models\DmCard;
 
 class CardController extends Controller
 {
-	public function randomList()
+	// カード情報をランダムに取得
+	public function randomThree()
 	{
-		$cards = DmCard::all();
-		return $cards;
+		$randomCards = DmCard::inRandomOrder()->take(3)->get();
+		$jsonData = response()->json(["data" => $randomCards]);
+
+		return $jsonData;
+	}
+
+	// 指定型番のカード情報を取得
+	public function show($id)
+	{
+		$card = DmCard::findOrFail($id);
+		$jsonData = response()->json(["card" => $card]);
+
+		return $jsonData;
 	}
 }

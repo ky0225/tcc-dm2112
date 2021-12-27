@@ -20,7 +20,7 @@ services:
     container_name: tcc-dm-db-container
     ports:
     - "3306:3306"
-    restart: always
+#    restart: always
     environment:
       MYSQL_DATABASE: tcc-dm
       MYSQL_USER: app

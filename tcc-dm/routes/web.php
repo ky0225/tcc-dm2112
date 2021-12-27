@@ -20,5 +20,6 @@ Route::get('/', function () {
 
 Route::prefix('v1/dm-cards')
 	->group(function () {
-		Route::get('/', [CardController::class, 'randomList']); // カード情報（ランダム）
+		Route::get('/', [CardController::class, 'randomThree']); // カード情報（ランダム）
+		Route::get('/{cardId}', [CardController::class, 'show']); // カード情報（型番指定）
 	});

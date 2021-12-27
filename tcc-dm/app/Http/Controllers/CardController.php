@@ -7,6 +7,12 @@ use App\Models\DmCard;
 
 class CardController extends Controller
 {
+	// 文字化け対策
+	public function __construct()
+	{
+		$this->middleware('JpJsonResponse');
+	}
+
 	// カード情報をランダムに取得
 	public function randomThree()
 	{
@@ -20,8 +26,7 @@ class CardController extends Controller
 	public function show($id)
 	{
 		$card = DmCard::findOrFail($id);
-		$jsonData = response()->json(["card" => $card]);
 
-		return $jsonData;
+		return $card;
 	}
 }
